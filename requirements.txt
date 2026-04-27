@@ -1,0 +1,5 @@
+flask
+pyjwt
+pyotp
+qrcode[pil]
+bcrypt
