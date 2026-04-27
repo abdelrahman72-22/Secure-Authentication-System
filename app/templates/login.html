@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Login</h1>
+      <form id="login-form">
+        <label for="identifier">Email or Username</label>
+        <input id="identifier" required />
+
+        <label for="password">Password</label>
+        <input id="password" type="password" required />
+
+        <button type="submit">Continue to 2FA</button>
+      </form>
+      <div id="status"></div>
+      <p><a href="/register">Create an Account</a></p>
+    </div>
+
+    <script src="/static/js/auth.js"></script>
+    <script src="/static/js/login.js"></script>
+  </body>
+</html>

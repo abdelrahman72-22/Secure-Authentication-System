@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Register</h1>
+      <p>Create account and configure authenticator app.</p>
+      <form id="register-form">
+        <label for="name">Name</label>
+        <input id="name" required />
+
+        <label for="identifier">Email or Username</label>
+        <input id="identifier" required />
+
+        <label for="password">Password</label>
+        <input id="password" type="password" required minlength="8" />
+
+        <label for="role">Role</label>
+        <select id="role" required>
+          <option value="Admin">Admin</option>
+          <option value="Manager">Manager</option>
+          <option value="User" selected>User</option>
+        </select>
+
+        <button type="submit">Create Account</button>
+      </form>
+
+      <div id="status"></div>
+      <img id="qr-code" class="qr" alt="2FA QR Code" />
+      <p>Manual secret: <code id="manual-secret"></code></p>
+      <p><a href="/login">Go to Login</a></p>
+    </div>
+
+    <script src="/static/js/auth.js"></script>
+    <script src="/static/js/register.js"></script>
+  </body>
+</html>
